@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .login-header {
+            height: 30px;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .login {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            width: 512px;
+            height: 280px;
+            background: #fff;
+            border: #ebebeb solid 1px;
+            box-shadow: 0px 0px 20px #ddd;
+        }
+        
+        .login-title {
+            position: relative;
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            cursor: move;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: #ebebeb solid 1px;
+            border-radius: 50%;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        .login-input {
+            margin-top: 20px;
+        }
+        
+        .login-input li {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .login-input label {
+            float: left;
+            text-align: right;
+            width: 90px;
+            height: 35px;
+            font-size: 14px;
+            line-height: 35px;
+        }
+        
+        .list-input {
+            float: left;
+            margin-left: 20px;
+            line-height: 35px;
+            height: 35px;
+            width: 350px;
+            border: #ebebeb 1px solid;
+        }
+        
+        .login-button {
+            width: 50%;
+            margin: 30px auto 0;
+            line-height: 40px;
+            font-size: 14px;
+            border: #ebebeb 1px solid;
+            text-align: center;
+        }
+        
+        .login-button a {
+            display: block;
+            height: 100%;
+        }
+        
+        .bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var click_header = document.querySelector('.click-header');
+            var login = document.querySelector('.login');
+            var bg = document.querySelector('.bg');
+            var closebtn = document.querySelector('.close-btn');
+            var login_title = document.querySelector('.login-title');
+            click_header.addEventListener('click', function() {
+                login.style.display = 'block';
+                bg.style.display = 'block';
+            })
+            closebtn.addEventListener('click', function() {
+                login.style.display = 'none';
+                bg.style.display = 'none';
+            })
+
+            login_title.addEventListener('mousedown', function(e) {
+                var X = e.pageX - login.offsetLeft;
+                var Y = e.pageY - login.offsetTop;
+                console.log(X)
+                console.log(Y)
+                document.addEventListener('mousemove', move)
+
+                function move(e) {
+                    login.style.left = e.pageX - X + 'px';
+                    login.style.top = e.pageY - Y + 'px';
+                }
+                document.addEventListener('mouseup', function() {
+                    document.removeEventListener('mousemove', move);
+                })
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="login-header"><a href="javascript:;" class="click-header">点击，弹出登录框</a></div>
+    <div class="login">
+        <div class="login-title"> 登录会员
+            <a href="javascript:;" class="close-btn">关闭</a>
+        </div>
+        <div class="login-input">
+            <ul>
+                <li> <label for="">用户名:</label><input type="text" placeholder="请输入用户名" name="info[username]" class="list-input"></li>
+                <li> <label for="">登录密码:</label><input type="password" placeholder="请输入密码" name="info[password]" class="list-input"></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <a href="javascript:;" class="button-submit">登录</a>
+        </div>
+
+    </div>
+    <!-- 遮盖层 -->
+    <div class="bg"></div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级轮播</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .banner img{
+            width: 1226px;
+            height: 460px;
+        }
+        .banner>span{
+            width: 30px;
+            height: 60px;
+            color: rgb(215,211,211);
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+            position: absolute;
+            cursor: pointer;
+            user-select: none;
+        }
+        .banner>span:hover{
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+        }
+        .banner>.pre{
+            left: 0;
+            top: 40%;
+        }
+        .banner>.next{
+            right: 0;
+            top:40%;
+        }
+        .disappear{
+            animation: moveA 1s 0s 1;
+        }
+        @keyframes moveA {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+            40% {
+                opacity: 0.6;
+            }
+            60% {
+                opacity: 0.4;
+            }
+            80% {
+                opacity: 0.2;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .appear{
+            animation: moveB 1s 0s 1;
+        }
+        @keyframes moveB {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.2;
+            }
+            40% {
+                opacity: 0.4;
+            }
+            60% {
+                opacity: 0.6;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="banner">
+    <span class="pre">&lt;</span>
+    <span class="next">&gt;</span>
+    <a href="#">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b4eaa00be8d636a5f7b843b0704548ad.jpg?w=2452&h=920">
+    </a>
+</div>
+<script>
+    // 顶部轮播图 JavaScript代码
+
+    let currImg = document.querySelector(".banner img");
+    let preBtn = document.querySelector(".banner>.pre");
+    let nextBtn = document.querySelector(".banner>.next");
+    //  轮播图的图片路径
+    let imgSrc = ["https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b4eaa00be8d636a5f7b843b0704548ad.jpg?w=2452&h=920",
+        "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12a95d14eec558d7ebd585b1b3b725b0.jpg?thumb=1&w=1226&h=460",
+        "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/29d0a0b83843d7d1ba7a30a9400257e9.jpg?thumb=1&w=1226&h=460",
+        "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e52c3e98602b90f198ec316dce253cba.jpg?thumb=1&w=1226&h=460",
+        "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6ef43cf9f138a7fc3a39273d7e3d13b6.jpg?thumb=1&w=1226&h=460"];
+    // 当前索引
+    let currIndex = 0;
+
+    // 为向左切换按钮添加事件
+    addEventForButton(preBtn, "left");
+    // 为向右切换按钮添加事件
+    addEventForButton(nextBtn, "right");
+
+    // 自定义为切换按钮添加事件的函数 obj为需要添加的按钮，str取值为left/right(按钮切换方向)
+    function addEventForButton(obj, str) {
+        obj.onclick = function () {
+            // 延迟 删除动画类 disappear appear
+            setTimeout(function () {
+                currImg.classList.remove("disappear");
+                currImg.classList.remove("appear");
+            }, 500);
+
+            // 判断数组索引是否越界
+            if (str === "left") {
+                currIndex--;
+                if (currIndex < 0)
+                    currIndex = 4;
+            }
+            if (str === "right") {
+                currIndex++;
+                if (currIndex > 4)
+                    currIndex = 0;
+            }
+
+            // 增加动画类 disappear appear
+            currImg.classList.add("disappear");
+            currImg.src = imgSrc[currIndex];
+            currImg.classList.add("appear");
+        };
+    }
+</script>
+</body>
+</html>

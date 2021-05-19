@@ -1,0 +1,149 @@
+
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background-color: #F5F5F5;
+   font-family: tahoma;
+}
+ul,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,input{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #6C6C6C;
+    
+}
+input,button {
+    outline: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.col {
+    color: #F22E00;
+}
+.main {
+    width: 1189px;
+    margin: 0 auto;
+    padding-left: calc(100vw - 100%);
+}
+/* 头部 */
+header {
+    height: 36px;
+    line-height: 36px;
+}
+.head-l {
+    height: 36px;
+}
+.select-city {
+    position: relative;  
+}
+.current-bg {
+    background-color: #fff;
+}
+.select-city a {
+    display: block;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 5px;
+     font-size: 12px;
+     line-height: 27px;
+    
+}
+.select-city a span {
+    margin: 0;
+}
+.select-icon {
+    font-family: 'iconmoon';
+   margin-left: 4px;
+   vertical-align: middle;
+      
+}
+.select-items {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 260px;
+    height: 300px;
+    background-color: #fff;
+    overflow-y: auto;
+    display: none;
+     /* pointer-events: none; */
+}
+.select-items>a {
+    padding-left: 8px;
+}
+.select-items a:hover {
+    background-color: #e4e4e4;
+}
+.head-l span {
+    margin: 0 10px;
+}
+.head-l-items li {
+    margin-right: 20px;
+}
+.head-l-items li:hover a {
+    color: #F22E00;
+}
+.nav-menu li {
+    float: left;
+    height: 36px;
+}
+.nav-menu .long {
+    width: 2px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 12px 5px 0;
+}
+.nav-menu li  {
+    position: relative;
+}
+.nav-menu li a {
+    
+    display: block;
+    height: 100%;
+    padding: 0 5px;
+}
+.nav-menu li:hover a{
+    color: #F22E00;
+}
+/* 下拉菜单 */
+.selectMenu {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    white-space: nowrap;
+    display: none;
+}
+.selectMenu .select_item {
+    height: 24px;
+    line-height: 24px;
+    color: #666666;
+    padding: 0 5px;
+}
+.select_item:hover {
+    background-color: #e4e4e4;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>正则表达式</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 字面量方式创建
+		var reg1 = /^[123]$/
+		console.log(reg1.test(1))//  匹配[]内的任意一个数字开头结尾
+		// new RegExp对象创建
+		var reg2 = new RegExp('^[123]$')
+		console.log(reg2.test(3))
+		// i的使用 i不区分大小写
+		var reg3 = /^[wer]/i
+		console.log(reg3.test('W')) 
+		// ^的使用查找不包含[]内的数字
+		var reg4 = /^[^123]/
+		console.log(reg4.test(5)) 
+		// \d 查找数字
+		var reg5 = /^\d$/
+		console.log(reg5.test(4))
+		//  \D 查找所有字母
+		var reg6 = /^\D/
+		console.log(reg6.test('e'))
+
+	</script>
+</body>
+</html>

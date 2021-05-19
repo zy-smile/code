@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            position: relative;
+            height: 100%;
+            background: url(media/bei.jpg) no-repeat;
+        }
+        
+        .box {
+            position: absolute;
+            top: 260px;
+            right: 354px;
+            width: 88px;
+            height: 88px;
+            z-index: 3;
+        }
+        
+        .box1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 88px;
+            height: 88px;
+            background: url(media/zhan.png) no-repeat -224px -494px;
+            animation: run 1.5s linear infinite;
+        }
+        
+        .box:hover {
+            cursor: pointer;
+        }
+        
+        .box:hover .box1 {
+            animation-play-state: paused;
+        }
+        
+        @keyframes run {
+            0% {}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .box2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 30px;
+            background: url(media/zhan.png) no-repeat -2289px -104px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/react.min.js"></script>
+  <script src="./js/react-dom.min.js"></script>
+  <script src="./js/babel.js"></script>
+</head>
+<body>
+  <div id="example"></div>
+  <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            list: ['吃饭', '睡觉', '打豆豆']
+          }
+          this.add = this.add.bind(this)
+        }
+        add(newValue) {
+          let list = this.state.list
+          list.unshift(newValue)
+          this.setState({
+            list
+          })
+        }
+        render() {
+          let {list} = this.state
+          return (
+           <div>
+            <AddTodos add={this.add} length={list.length}/>
+            <Addlist list={list}/>
+            </div>
+          )
+        }
+      }
+      class AddTodos extends React.Component {
+        constructor(props) {
+          super(props)
+          this.handleClick = this.handleClick.bind(this)
+        } 
+        handleClick() {
+          let value = this.refs.ipt.value
+          if(!value.trim()) {
+            alert('请输入内容')
+            return
+          }
+          this.props.add(value)
+        }
+        render() {
+          let length = this.props.length
+          return (
+            <div>
+                <input type="text" ref='ipt'/>
+                <button onClick={this.handleClick}>add #{length}</button>  
+            </div>
+          )
+        }
+      }
+      class Addlist extends React.Component {
+        render() {
+          let list = this.props.list
+          return (
+            <div>
+                <ul>
+                    {
+                      list.map((item,index) => {
+                        return <li key={index}>{item}</li>
+                      })
+                    }  
+                </ul>  
+            </div>
+          )
+        }
+      }
+      ReactDOM.render(<App />,document.getElementById('example'))
+  </script>
+</body>
+</html>

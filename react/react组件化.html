@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/react.min.js"></script>
+  <script src="./js/react-dom.min.js"></script>
+  <script src="./js/babel.js"></script>
+</head>
+<body>
+  <div id="explame1"></div>
+  <div id="explame2"></div>
+  <script type="text/babel">
+  // 工厂函数，简单方式
+  function MyComponent1() {
+    return <h1>react组件一</h1>
+  }
+  ReactDOM.render(<MyComponent1 />,document.getElementById('explame1'))
+  // Es6类语法
+  class MyComponent2 extends React.Component {
+    render() {
+      return <h2>Es6渲染react组件</h2>
+    }
+  }
+  ReactDOM.render(<MyComponent2 />,document.getElementById('explame2'))
+  </script>
+</body>
+</html>

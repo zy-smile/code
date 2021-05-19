@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <input type="file" onchange="filechange(this)">
+    <input type="hidden" id="ipt" value="">
+    <script>
+        function filechange(th) {
+            var file= th.files[0]
+            var reader = new FileReader()
+            reader.readAsDataURL(file)
+            reader.onload = function(res){
+                console.log(res);
+                // document.getElementById('ipt').setAttribute('value',res.target.result)
+                // console.log(document.getElementById('ipt').getAttribute('value'));
+                $('#ipt').val(res.target.result)
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            var arr = [1, 2, 4, 5]
+                //方法一
+            $("div").each(function(i, domEle) {
+                    console.log(domEle);
+
+                    console.log($(domEle).html());
+
+                })
+                //方法二
+            $.each($("div"), function(i, domEle) {
+                console.log(i);
+
+            })
+            $.each($(arr), function(i, ele) {
+                console.log(ele);
+
+            })
+            $.each({
+                name: "andy",
+                agg: 18
+            }, function(i, ele) {
+                console.log(i);
+
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4dba82f2-ee3a-4145-945e-5e535f73d8fb" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/nodeJs/git/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodeJs/git/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/React-demo/hello-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react/React-demo/hello-react/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/React-demo/hello-react/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/React-demo/hello-react/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/my-component/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/my-component/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/my-component/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/my-component/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/my-component/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_component/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_component/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_component/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_component/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_component/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_component/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_component/src/views/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_component/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_component/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/src/views/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/vue_router/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/vue_router/src/views/Home.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/angular/angular-todos" />
+  </component>
+  <component name="ProjectId" id="1lu666z7FeP62m2BRoZbLW9TGo0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowCommit.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4dba82f2-ee3a-4145-945e-5e535f73d8fb" name="默认更改列表" comment="" />
+      <created>1608434453225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608434453225</updated>
+      <workItem from="1608434468637" duration="160000" />
+      <workItem from="1608434722776" duration="45000" />
+      <workItem from="1608434809299" duration="259000" />
+      <workItem from="1609060767315" duration="5000" />
+      <workItem from="1618629204273" duration="1298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608435094961">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1608435094961" />
+    <state x="490" y="143" key="FileChooserDialogImpl" timestamp="1608434705725">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="490" y="143" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1608434705725" />
+    <state x="548" y="276" key="save.project.as.template.dialog" timestamp="1608435034740">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="548" y="276" key="save.project.as.template.dialog/0.0.1366.738@0.0.1366.738" timestamp="1608435034740" />
+  </component>
+</project>

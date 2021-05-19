@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            height: 100%;
+            background-color: #fff;
+        }
+        
+        body {
+            width: 640px;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 80px;
+            background-color: #F8F8F8;
+        }
+        
+        .box {
+            height: 40px;
+        }
+        
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 40px;
+            background-color: #F4A460;
+        }
+        
+        .box2 {
+            float: left;
+            overflow: hidden;
+            width: 540px;
+            height: 40px;
+        }
+        
+        .boxinfo {
+            position: relative;
+            width: 200%;
+            height: 40px;
+            animation: move 4s linear infinite;
+        }
+        
+        .news1,
+        .news2 {
+            position: absolute;
+            width: 50%;
+            top: 0;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .news1 {
+            left: 0;
+        }
+        
+        .news2 {
+            left: 50%;
+        }
+        
+        @keyframes move {
+            0% {}
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2">
+            <div class="boxinfo">
+                <p class="news1">从前有座山，山里有座庙，庙里有个页面找呀找不到</p>
+                <p class="news2">从前有座山，山里有座庙，庙里有个页面找呀找不到</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

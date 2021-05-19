@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+        <li>大猪蹄子</li>
+    </ul>
+    <script>
+
+        var lis = document.querySelector('.nav').querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            (function(i) {
+                setInterval(function() {
+                    console.log(lis[i].innerHTML);
+
+                }, 3000)
+            })(i);
+
+        }
+        //闭包计算打车价格
+        var car = (function() {
+            var start = 13;
+            var total = 0;
+            console.log(start)
+            return {
+                price: function(n) {
+                    console.log(1111)
+                    if (n <= 3) {
+                        total = start;
+                    } else {
+                        total = start + (n - 3) * 5;
+                    }
+                    return total;
+                },
+                yd: function(flag) {
+                    return flag ? total + 10 : total;
+                }
+            }
+        })();
+        // console.log(car.price(14));
+        // console.log(car.yd(true));
+    </script>
+</body>
+
+</html>

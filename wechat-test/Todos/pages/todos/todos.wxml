@@ -1,0 +1,19 @@
+<view class="header">
+   <image src="../../images/add.jpg" bindtap="addTodosList"></image>
+  <input placeholder="add tolist..." bindinput="inputChange" bindconfirm="addTodosList"></input>
+</view>
+<block wx:if="{{todoList.length}}">
+<view class="container">
+  <view class="item" wx:for="{{ todoList }}" wx:key="index">
+  	<icon type="{{item.done? 'success': 'circle'}}" class="icon-small" bindtap="iconChange" data-id="{{index}}"></icon>
+  	<text class="{{item.done?'completed': ''}}">{{ item.content}}</text>
+  	<icon class="icon-small" type="cancel" color="#ccc" data-id="{{index}}" bindtap="removeList"></icon>
+  </view>
+</view>
+<view class="footer">
+	<text bindtap="allCompleted">all completed</text>
+	<text> {{doneListNum}} {{doneListNum > 1? 'items': 'item'}} list</text>
+	<text bindtap="clearDone">clear completed</text>
+</view>
+</block>
+<view wx:else class="noTodo">添加任务...</view>

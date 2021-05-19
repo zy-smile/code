@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        table {
+            width: 600px;
+            cursor: pointer;
+        }
+        
+        table td {
+            text-align: center;
+        }
+        
+        table th {
+            background-color: blueviolet;
+        }
+        
+        table tr {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="form">
+        <li>
+            请输入姓名：<input type="text" value="" id='uname'>
+        </li>
+        <li>
+            请输入邮箱：<input type="text" value="" id='email'>
+        </li>
+        <li><button id='btn'>添加</button></li>
+    </ul>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>小黑</td>
+                <td>xiaohei@126.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var ul = document.querySelector('.form');
+        var ipt1 = document.getElementById('uname');
+        var ipt2 = document.getElementById('email');
+        var btn = document.getElementById('btn');
+        var tbody = document.querySelector('tbody');
+        //监听注册事件
+        btn.addEventListener('click', function() {
+                if (ipt1.value == '' || ipt2.vlue == '') {
+                    alert('请把数据填写完全');
+                    return;
+                } else {
+                    var tr = document.createElement('tr');
+                    var td1 = document.createElement('td');
+                    tr.appendChild(td1);
+                    td1.innerHTML = ipt1.value;
+                    var td2 = document.createElement('td');
+                    tr.appendChild(td2);
+                    td2.innerHTML = ipt2.value;
+                    tbody.appendChild(tr);
+                }
+            })
+    
+    </script>
+</body>
+
+</html>

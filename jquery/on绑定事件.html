@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 300px;
+            height: 40px;
+            background: pink;
+        }
+        
+        .current {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(function() {
+            $("div").on(function() {
+                $(this).toggleClass("current")
+            })
+        })
+    </script>
+    <div></div>
+</body>
+
+</html>

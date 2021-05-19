@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            margin: 0 auto;
+        }
+        
+        input {
+            float: left;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+        
+        .icon {
+            float: left;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .icon img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div><input type="password">
+        <div class="icon"><img src="images/close.png" alt="" class="imgs"></div>
+    </div>
+    <script>
+        var input = document.querySelector('input');
+        var icon = document.querySelector('.icon');
+        var imgs = document.querySelector('.imgs');
+        var flag = 0;
+        icon.addEventListener('click', function() {
+            if (flag == 0) {
+                input.type = 'text';
+                imgs.src = 'images/open.png';
+                flag = 1;
+            } else {
+                input.type = 'password';
+                imgs.src = 'images/close.png';
+                flag = 0;
+            }
+
+        })
+    </script>
+</body>
+
+</html>

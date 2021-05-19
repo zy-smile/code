@@ -1,0 +1,25 @@
+.container {
+    margin: 50px auto;
+}
+.search {
+    margin: 0 0 100px 100px;
+}
+h3 {
+    margin-left: 100px;
+}
+.items li {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    list-style-type: none;
+}
+.items li a {
+    display: block;
+
+}
+.items li img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+}

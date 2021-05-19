@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示与隐藏</title>
+	<style>
+		.box {
+			position: relative;
+			width: 222px;
+			height: 220px;
+			margin: 100px auto;
+		}
+		.bom {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 222px;
+			height: 220px;
+			background: rgba(0,0,0,0.3) url(images/arr.png) no-repeat center center;
+		}
+		.box:hover .bom {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="bom"></div>
+		<img src="images/3.jpg" alt="">
+	</div>
+</body>
+</html>

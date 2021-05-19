@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .three {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="two">开关</button>
+    <script>
+        var btn = document.querySelector('button');
+        //添加类名
+        btn.classList.add('one');
+        //删除类名
+        btn.classList.remove('two');
+        //切换类
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('three');
+        })
+    </script>
+</body>
+
+</html>

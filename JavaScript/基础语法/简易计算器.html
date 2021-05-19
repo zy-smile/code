@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        var num = prompt('欢迎使用简易计算器:' + '\n' + '1.加法运算：' + '\n' + '2.减法运算:' + '\n' + '3.乘法运算：' + '\n' + '4.除法运算：' + '\n' + '5.退出' + '\n')
+        var num1;
+        var num2;
+        switch(num) {
+            case '1': 
+             num1 = prompt('请输入第一个数据：');
+             num2 = prompt('请输入第二个数据：');
+            var and = parseFloat(num1) + parseFloat(num2);
+                alert('运算结果是：' + and);
+                break;
+            case '2': 
+                num1 = prompt('请输入第一个数据：');
+                num2 = prompt('请输入第二个数据：');
+                var sub = parseFloat(num1) - parseFloat(num2);
+                alert('运算结果是：' + sub);
+                
+            case '3': 
+                num1 = prompt('请输入第一个数据：');
+                num2 = prompt('请输入第二个数据：');
+                var ride = parseFloat(num1) * parseFloat(num2);
+                alert('运算结果是：' + ride);
+                break;
+            case '4': 
+                num1 = prompt('请输入第一个数据：');
+                num2 = prompt('请输入第二个数据：');
+                var divide = parseFloat(num1) / parseFloat(num2);
+                alert('运算结果是：' + divide);
+                break;
+            default: 
+               break;
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

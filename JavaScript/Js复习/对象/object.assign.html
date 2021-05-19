@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对象浅拷贝</title>
+</head>
+<body>
+  <script>
+    var obj = {
+      'name': 'zhangsan',
+      'age': 23,
+      "sex": '男',
+      
+       'say': {
+         'num': 100
+       }
+    }
+    var obj1 = {
+      'name': 'zhaoliu',
+      'age': 22,
+      'say': {
+         'num': 100
+       }
+    }
+  
+  function objAssign(newobj, obj) {
+      if (obj && obj instanceof Object) {
+        for (key in obj) {
+          newobj[key] = obj[key]
+        }
+      }
+      return newobj
+    }
+objAssign(obj,obj1)
+console.log(obj);
+  </script>
+</body>
+</html>

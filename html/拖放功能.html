@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>拖放功能实现</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#box1,
+		#box2 {
+			float: left;
+			width: 300px;
+			height: 200px;
+			border: 1px solid #333;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1" ondragover="allowDrop(event)" 
+	 ondrop="drop(event)">
+		<img src="video/school.gif" alt="" draggable="true" id="img1" ondragstart="drag(event)">
+	</div>
+	<div id="box2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<script>
+		function drag(e) {
+			e.dataTransfer.setData('Text', e.target.id )
+			console.log(22)
+		}
+		function allowDrop(e) {
+			e.preventDefault()
+			console.log(11)
+		}
+		function drop(e) {
+			console.log(33)
+			e.preventDefault()
+			var id = e.dataTransfer.getData('Text')
+			e.target.appendChild(document.getElementById(id))
+		}
+	</script>
+</body>
+</html>

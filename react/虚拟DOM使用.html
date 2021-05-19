@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/react.min.js"></script>
+  <script src="./js/react-dom.min.js"></script>
+  <script src="./js/babel.js"></script>
+
+</head>
+<body>
+  <div id="explame"></div>
+  <div id="explame2"></div>
+  <ul id="explame3"></ul>
+  <script type="text/babel">
+    var h2 = <h2>虚拟DOM插入</h2>
+    ReactDOM.render(h2,document.getElementById('explame'))
+    ReactDOM.render(<h3>虚拟DOM</h3>, document.getElementById('explame2'))
+    let arr = [1,2,3]
+    let liArr = arr.map((item,index) => {
+      return <li key={index}>{item}</li>
+    })
+    ReactDOM.render(liArr,document.getElementById('explame3'))
+  </script>
+</body>
+</html>

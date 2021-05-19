@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .nav {
+            width: 320px;
+            height: 50px;
+            margin: 100px auto;
+        }
+        
+        .items {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .items:hover {
+            background: red;
+            color: #fff;
+        }
+        
+        .items span {
+            display: block;
+            height: 100%;
+        }
+        
+        .items ul {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+        
+        .items li {
+            width: 80px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        
+        .items li:hover {
+            background: yellow;
+        }
+        
+        .items li:hover a {
+            color: blue;
+        }
+        
+        .items a {
+            display: block;
+            height: 100%;
+            color: #333;
+            line-height: 40px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="items">
+            <span>新浪</span>
+            <ul>
+                <li><a href="#">粉丝</a></li>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+            </ul>
+        </li>
+        <li class="items">
+            <span>微博</span>
+            <ul>
+                <li><a href="#">粉丝</a></li>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+            </ul>
+        </li>
+        <li class="items">
+            <span>热搜</span>
+            <ul>
+                <li><a href="#">粉丝</a></li>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+            </ul>
+        </li>
+        <li class="items">
+            <span>新闻</span>
+            <ul>
+                <li><a href="#">粉丝</a></li>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <script>
+        // DOM操作
+        // var items = document.querySelectorAll('.items');
+        // for (i = 0; i < items.length; i++) {
+
+        //     items[i].addEventListener('mouseover', function() {
+        //         this.children[1].style.display = 'block';
+
+        //         this.addEventListener('mouseout', function() {
+        //             this.children[1].style.display = 'none';
+        //         })
+        //     })
+        // }
+        // jQuery使用
+        // $(".nav>li").mouseover(function() {
+        //     $(this).children("ul").show();
+        // }
+        // $(".nav>li").mouseout(function() {
+        //     $(this).children("ul").hide();
+        // })
+        //划入划出
+        // $(".nav>li").mouseover(function() {
+        //     $(this).children("ul").slideDown();
+        // })
+        // $(".nav>li").mouseout(function() {
+        //     $(this).children("ul").slideUp();
+        // })
+        // 复合写法
+        // $(".nav>li").hover(function() {
+        //     $(this).children("ul").slideDown();
+        // }, function() {
+        //     $(this).children("ul").slideUp();
+        // })
+        // 简写
+        $(".nav>li").hover(function() {
+            // $(this).children("ul").stop().slideToggle();
+            //淡入淡出
+            $(this).children("ul").stop().fadeToggle(1000);
+
+        })
+    </script>
+</body>
+
+</html>

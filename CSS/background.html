@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>背景图片设置</title>
+	<link rel="stylesheet" href="">
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+		body {
+			background: url(images/banner.jpg) no-repeat;
+			background-size: 50% 800px;
+			background-origin: content-box;
+			/*firefox*/
+			-moz-background-size: 50% 800px;
+			/*chrome*/
+			-webkit-background-size: 50% 800px;
+			/*opera*/
+			-o-background-size: 50% 800px;
+			/*IE*/
+			-ms-background-size: 50% 800px; 
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态表格</title>
+    <style>
+        table {
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+            
+        }
+        table td,
+        th  {
+            padding:5px 30px;
+        }
+        table th {
+            background-color: #4da8e6;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(219, 52, 52);
+        }
+        table tr:nth-child(even) {
+            background-color: rgb(174, 145, 202);
+        }
+        h4 {
+            margin: 0;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            let data = [
+                {uname: '张三', age: 14, 手机: 1345678901},
+                {uname: '李四', age: 23, 手机: 3456654433},
+                {uname: '王五', age: 34, 手机: 2246644334},
+                {uname: '赵六', age: 54, 手机: 4455664443},
+                {uname: '小明', age: 23, 手机: 4654433333}
+            ]
+            let tbody = document.querySelector('tbody')
+            let table = document.querySelector('table')
+            let title = document.createElement('caption')
+            title.innerHTML = '<h4>用户信息</h4>'
+            table.insertBefore(title, tbody.children[0])
+            data.forEach(item => {
+                let tr = document.createElement('tr')
+                for (k in item) {
+                    let td = document.createElement('td')
+                    td.innerHTML = item[k]
+                    tr.appendChild(td)
+                }
+                let tdLast = document.createElement('td')
+                tdLast.innerHTML = '<a href="javascript:;">删除</a>'
+                tr.appendChild(tdLast)
+                tbody.appendChild(tr)
+            })
+            let as = document.querySelectorAll('a')
+            as.forEach((val, i) => {
+               val.onclick = function() {
+                   tbody.removeChild(this.parentNode.parentNode)
+               }
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <table border>
+        <thead>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>电话</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

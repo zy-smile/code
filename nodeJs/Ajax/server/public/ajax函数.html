@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		function ajax(options) {
+			var defaults = {
+				type: 'get',
+				url : '',
+				data: {},
+				header: {
+				'Content-Type': 'application/json'
+			},
+				sucess: function(){},
+				error: function(){}
+			}
+			Object.assign(defaults,options);
+			var xhr = new XMLHttpRequest();
+			var params = '';
+				for(attr in options.data){
+					params += attr + '='+options.data[attr]+'&';
+				}
+				params = params.substr(0,params.length-1);
+				console.log(params)
+				if(options.type == 'get') {
+					options.url = options.url +'?'+ params;
+				}
+		xhr.open(options.type,options.url);
+		if(options.type == 'post'){
+			var contentType = options.header['Content-Type'];
+			xhr.setRequestHeader('Content-Type',contentType);
+			xhr.send(params);
+			if(contentType == 'application/json'){
+				xhr.send(JSON.stringify(options.data))
+			}else{
+				xhr.send(params);
+			}
+		}else {
+			xhr.send();
+		}
+		
+		xhr.onload = function() {
+			var contentType = xhr.getResponseHeader('Content-Type');
+			var responseText = xhr.responseText;
+			if(contentType.includes('application/json')){
+			options.sucess(JSON.parse(responseText))
+
+			}else{
+			options.sucess(responseText)
+
+			}
+		}
+	}
+		ajax({
+			
+			url: 'http://localhost:3000/two',
+			
+			
+			sucess : function(data){
+				console.log(data);
+			}
+		})
+	</script>
+</body>
+</html>

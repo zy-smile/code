@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            var li = $("<li>创建的</li>");
+            var lili = $("<li>创建的第二个</li>")
+            $("ul").append(li);
+            $("ul").prepend(lili);
+            // $("ul").remove();
+            // $("ul").empty();
+            var div = $("<div>创建</div>");
+            $("ul").before(div);
+
+        })
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>我是原来的</li>
+    </ul>
+</body>
+
+</html>

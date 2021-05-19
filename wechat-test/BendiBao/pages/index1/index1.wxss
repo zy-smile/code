@@ -1,0 +1,53 @@
+.container {
+	height: 100%;
+	background-color: #E6E6E6;
+}
+.banner {
+	height: 300rpx;
+}
+.banner image {
+	width: 100%;
+	height: 100%;
+}
+.listItems {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+}
+.listItems .list-item {
+	display: flex;
+	flex-direction: column;
+	width: 33.333333%;
+	align-items: center;
+	border-right: 1rpx solid #eee;
+	border-bottom: 1rpx solid #eee;
+	padding: 40rpx 0;
+	box-sizing: border-box;
+
+}
+.list-item image {
+	width: 120rpx;
+	height: 120rpx;
+	background-color: pink;
+	margin: 20rpx 0;
+}
+.special {
+	display: flex;
+	margin-top: 20rpx;
+	background-color: #fff;
+}
+.special .recommend,
+.special .forum {
+	flex: 1;
+	height: 180rpx;
+	margin: 20rpx;
+	text-align: center;
+	line-height: 180rpx;
+	color: #fff;
+}
+.special .recommend {
+	background-color: #FF7F78;
+}
+.special .forum {
+	background-color: #94BEE2;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美的导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?djj3dd');
+            src: url('fonts/icomoon.eot?djj3dd#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?djj3dd') format('truetype'), url('fonts/icomoon.woff?djj3dd') format('woff'), url('fonts/icomoon.svg?djj3dd#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        
+        header {
+            border-top: 1px solid #ccc;
+            overflow: hidden;
+            height: 44px;
+            background-color: #0092d8;
+        }
+        
+        .logo {
+            float: left;
+            width: 120px;
+            height: 44px;
+        }
+        
+        .logo img {
+            display: block;
+            margin: 10px auto 0;
+        }
+        
+        .topnav ul li {
+            float: left;
+        }
+        
+        .topnav li a {
+            display: block;
+            height: 44px;
+            padding: 0 30px;
+            color: #fff;
+            line-height: 44px;
+        }
+        
+        .header-right {
+            float: right;
+        }
+        
+        .header-right li {
+            position: relative;
+            float: left;
+        }
+        
+        .header-right li:before {
+            cursor: pointer;
+        }
+        
+        .header-right li:nth-child(1) {
+            width: 45px;
+            height: 44px;
+            transition: all .5s;
+        }
+        
+        .search input {
+            position: relative;
+            text-indent: 2rem;
+            opacity: 0;
+            width: 100%;
+            height: 44px;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            transition: all .5s;
+        }
+        
+        .search input:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: url(img/index_sprite.png) no-repeat -64px -214px;
+        }
+        
+        .header-right .search:hover {
+            width: 200px;
+        }
+        
+        .search:hover input {
+            opacity: 1;
+        }
+        
+        .header-right li:nth-child(1):before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -2px;
+            width: 20px;
+            height: 20px;
+            background: url(img/index_sprite.png) no-repeat -93px -212px;
+        }
+        
+        .header-right li:nth-child(2) {
+            width: 65px;
+            height: 44px;
+        }
+        
+        .header-right li:nth-child(2):before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+            background: url(img/index_sprite.png) no-repeat -121px -215px;
+        }
+        
+        .header-right li:nth-child(3) {
+            width: 60px;
+            height: 44px;
+        }
+        
+        .header-right li:nth-child(3):before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background: url(img/index_sprite.png) no-repeat -144px -213px;
+        }
+        
+        .header-right li:nth-child(4) {
+            box-sizing: border-box;
+            width: 85px;
+            height: 44px;
+            padding: 11px 0 0 40px;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .header-right li:nth-child(4):before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background: url(img/index_sprite.png) no-repeat -38px -217px;
+        }
+        
+        .news {
+            background: rgba(0, 59, 102);
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            line-height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo_03.png" alt="">
+        </div>
+        <div class="topnav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">企业采购</a></li>
+                <li><a href="#">全屋家电套购</a></li>
+                <li><a href="#">会员福利社</a></li>
+                <li><a href="#">美的分期</a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li class="search">
+                    <input type="text" value="美的热水器">
+                </li>
+                <li></li>
+                <li></li>
+                <li>登录</li>
+            </ul>
+        </div>
+    </header>
+    <div class="news">
+        <p>【通知】1、美的商城为美的集团官方渠道，请勿相信任何刷单信息。2、新疆部分区域无法快递正常发货，恢复时间待定。3、 因美的会员体系改版，10月26-29日期间美的积分将处于冻结状态。届时您将无法获得和消耗积分，感谢理解！</p>
+    </div>
+
+</body>
+
+</html>

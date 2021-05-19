@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function Father(money,cars,house,company) {
+				this.money = money;
+				this.cars = cars;
+				this.house = house;
+				this.company = company;
+				
+			}
+			Father.prototype.manage = function() {
+				console.log('管理');
+			}
+			function Son(money,cars,house,company) {
+				Father.call(this,money, cars,house,company);
+				Son.prototype.constructor= Son;
+			}
+			var son =new Son(1000,'宝马','别墅','阿里巴巴');
+			console.log(son);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

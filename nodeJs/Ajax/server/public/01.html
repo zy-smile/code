@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//创建Ajax对象
+		var xhr = new XMLHttpRequest();
+		//告诉请求方式地址
+		xhr.open('get','http://localhost:3000/first');
+		//发送请求
+		xhr.send();
+		//获取响应数据
+		xhr.onload = function() {
+			var responseText = JSON.parse(xhr.responseText);
+			var str = '<h2>'+ responseText.name+'</h2>';
+			document.body.innerHTML =  str;
+			
+		}
+	</script>
+</html>

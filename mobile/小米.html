@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            background-color: #ccc;
+        }
+        
+        .box {
+            position: relative;
+            width: 235px;
+            height: 266px;
+            margin: 100px 0 0 100px;
+            padding-top: 34px;
+            background-color: #fff;
+            transition: all .2s;
+        }
+        
+        .product {
+            text-align: center;
+        }
+        
+        .box img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+        }
+        
+        .box h5 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #222;
+        }
+        
+        .pro {
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .price {
+            font-size: 18px;
+            color: #888;
+        }
+        
+        .price span {
+            color: brown;
+        }
+        
+        .move {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            width: 215px;
+            padding-left: 20px;
+            background-color: #ff6700;
+            font-size: 12px;
+            transition: all 0.2s linear;
+        }
+        
+        .move a {
+            color: #757575;
+            display: block;
+            padding: 8px 30px;
+            outline: 0;
+            text-decoration: none;
+        }
+        
+        .move a span {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .box:hover {
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+            -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+        }
+        
+        .box:hover .move {
+            opacity: 1;
+            height: 76px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="product">
+                <img src="media/xiaomi.jpg" alt="">
+                <h5>小米电视4A 43英寸青春版</h5>
+                <p class="pro">全高清屏 / 人工智能语音</p>
+                <p class="price"><span>1499元</span><del>1699</del></p>
+            </li>
+            <li class="move">
+                <a href="#">
+                    <span class="msg">一如既往的好，小米情怀</span>
+                    <span class="auther"> 来自于 惊喜 的评价 </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

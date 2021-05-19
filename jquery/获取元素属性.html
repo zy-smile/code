@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="http://www.itcast.cn" title="都挺好">都挺好</a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1" data-index="2">我是div</div>
+    <span>123</span>
+    <script>
+        console.log($("a").prop("title"));
+        $("a").prop("title", "我们都挺好");
+        $("input").change(function() {
+            console.log($(this).prop("checked"));
+        })
+        $("div").attr("index", "2")
+        console.log($("div").attr("index"));
+        $("span").data("index", "4");
+        console.log($("span").data("index"));
+        console.log($("div").data("index"));
+    </script>
+</body>
+
+</html>

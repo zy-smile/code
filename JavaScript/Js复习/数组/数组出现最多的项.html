@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		let arr = [1,2,4,6,3,2,1,2,1,7,2,8,2,9,2]
+		let obj = {}
+		for(i = 0; i < arr.length; i++) {
+			if(obj[arr[i]]) {
+				obj[arr[i]]++
+			}else {
+				obj[arr[i]] = 1
+			}
+		}
+	console.log(obj)
+	let max = 0;
+	let n = ''
+		for( key in obj) {
+if (obj[key] > max) {
+	n = key
+	max = obj[key]
+
+}
+}
+	console.log(n, max)	
+</script>
+</body>
+</html>

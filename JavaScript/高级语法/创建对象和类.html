@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var that;
+        var _that;
+        class Star {
+            constructor(uname, age) {
+                that = this;
+                this.name = uname;
+                this.age = age;
+                console.log(this.name);
+                console.log(this.age);
+                // this.sing();
+
+
+            }
+            sing() {
+                _that = this;
+                console.log(that.name);
+
+
+            }
+        }
+        var ldh = new Star('刘德华', 18);
+        ldh.sing();
+        console.log(_that);
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                super(x, y);
+                this.x = x;
+                this.y = y;
+            }
+            subtract() {
+                console.log(this.x - this.y);
+
+            }
+        }
+        var son1 = new Son(1, 2);
+        var son2 = new Son(3, 4);
+        son1.sum();
+        son1.subtract();
+        son2.sum();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

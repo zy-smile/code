@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+      .container {
+        width: 50%;
+         height: 300px;
+         margin: 100px auto;
+      }
+      .tab {
+        position: relative;
+        /* overflow: hidden; */
+      }
+      .tabNav {
+        list-style: none;
+        display: flex;
+        float: left;
+        width: 100%;
+      }
+      .tabNav li {
+        position: relative;
+        flex: 1;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-right: none;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .tabNav .del {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          margin-top: -10px;
+          width: 15px;
+          height: 15px;
+          border: 1px solid #999;
+          border-radius: 50%;
+          line-height: 13px;
+          font-weight: 400;
+          font-style: normal;
+          color: #333;
+          
+      }
+      .ipt {
+        width: 50%;
+        height: 100%;
+      }
+      .tabNav li:last-child {
+        border-right: 1px solid #ccc;
+      }
+      .tabNav li:hover {
+        background-color: #e4e4e4;
+      }
+      .tab .add {
+        position: absolute;
+        right: -40px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+
+      }
+      .tab .add:hover {
+        background-color: #e4e4e4;
+      }
+      .tabContent {
+        width: 100%;
+        height: 300px;
+        background-color: greenyellow;
+        overflow: hidden;
+      }
+      .tabItem {
+        height: 100%;
+        display: none;
+      }
+      .currentContent {
+        display: block;
+      }
+      .tabNav li.current {
+        border-bottom: 2px solid red;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="tab">
+        <ul class="tabNav">
+          <li class="current">
+            <span>Tab1</span>
+            <i class="del">x</i>
+          </li>
+          <li>
+            <span>Tab2</span>
+            <i class="del">x</i>
+          </li> 
+          <li>
+            <span>Tab3</span>
+            <i class="del">x</i>
+          </li>
+        </ul>
+        <div class="add">+</div>
+      </div>
+      <div class="tabContent">
+          <div class="tabItem currentContent">卡片1</div>
+          <div class="tabItem">卡片2</div>
+          <div class="tabItem">卡片3</div>
+      </div>
+  </div>
+<script>
+    let ul = document.querySelector('.tabNav')
+    let tabContent = document.querySelector('.tabContent')
+    let add = document.querySelector('.add')
+    let index = 0
+    let lis,tabItems,del,spans;
+    init()
+// 获取元素
+function updateNode() {
+  lis = ul.children
+  tabItems = document.querySelectorAll('.tabItem')
+  del = document.querySelectorAll('.del')
+  spans = document.querySelectorAll('.tabNav li span:first-child')
+}
+// 初始化
+function init() {
+  updateNode()
+  add.onclick = addClick
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].setAttribute('index', i)
+    lis[i].onclick = clickTab
+    spans[i].ondblclick = dbClick
+    del[i].onclick = delClick
+  }
+}
+// 清除所有类
+function clearAll() {
+    for (var j = 0; j < lis.length; j++) {
+        lis[j].className = ''
+        tabItems[j].classList.remove('currentContent')
+    }
+}
+// 切换
+function clickTab() {
+    clearAll()
+    var id = this.getAttribute('index')
+    lis[id].className = 'current'
+    tabItems[id].classList.add('currentContent')
+}
+
+// 修改
+function dbClick() {
+    window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+    let that = this
+    let text = this.innerHTML
+    this.innerHTML = `<input type="text" class="ipt" value="${text}"/>`
+    let input = this.children[0]
+    input.select()
+    input.onblur = function () {
+      that.innerHTML = this.value
+    }
+}
+// 添加tab
+function addClick() {
+  let length = lis.length
+  if(length < 8) {
+    let li = document.createElement('li')
+    li.innerHTML = `<span>Tab${length + 1}</span><i class="del">x</i>`
+    ul.appendChild(li)
+    let div = document.createElement('div')
+    div.className = 'tabItem'
+    div.innerHTML = `卡片${length + 1}`
+    tabContent.appendChild(div)
+  }else {
+    return false
+  }
+  init()
+}
+// 删除功能
+function delClick(e) {
+  e.stopPropagation()
+  var index = this.parentNode.getAttribute('index');
+  this.parentNode.remove()
+  tabItems[index].remove()
+  if(document.querySelector('.current')) return
+  index--
+  // 手动调用点击事件
+  lis[index].click()
+ 
+}
+</script>
+</body>
+</html>

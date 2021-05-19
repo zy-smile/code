@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;
+        function demo() {
+            console.log(num);
+            function demoSon() {
+                num = 3;
+            }
+            var num = 2
+            demoSon();
+        }
+        demo();
+
+        //  函数预解析
+        // var num;
+        // function demo() {
+        //     var num;
+        //     function demoSon() {
+        //         num = 3;
+        //     }
+        //     console.log(num);
+            
+        //     num = 2;
+        //     demoSon();
+        // }
+        // num = 1;
+        // demo();
+        var num;
+        function fn() {
+            var num;
+            console.log(num)
+        }
+        num = 1;
+        fn()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

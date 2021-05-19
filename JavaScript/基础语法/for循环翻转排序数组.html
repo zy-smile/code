@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reverse(arr) {
+            var newArr = [];
+            for (i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        var result = reverse([1, 2, 3, 4])
+        console.log(result);
+        //对数组进行从小到大排序
+        function sort(arr) {
+            for (i = 0; i < arr.length - 1; i++) {
+                for (j = 0; j < arr.length - i - 1; j++) {
+                    var temp = 0;
+                    if (arr[j] > arr[j + 1]) {
+                        temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var result = sort([2, 3, 1, 4]);
+        console.log(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

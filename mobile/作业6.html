@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阴阳师</title>
+    <style>
+        .down {
+            position: relative;
+            width: 144px;
+            height: 240px;
+            margin: 50px 0 0 50px;
+            padding-top: 47px;
+            background: url(media/line3.png) no-repeat 0px 0px;
+        }
+        
+        .erweima {
+            display: block;
+            width: 107px;
+            margin: 0 auto;
+        }
+        
+        .line {
+            position: absolute;
+            top: 46px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            margin: 0 auto;
+            animation: move 1.5s linear alternate infinite;
+        }
+        
+        @keyframes move {
+            0% {}
+            100% {
+                top: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="down">
+        <img src="media/line2.png" class="erweima">
+        <img src="media/line1.png" class="line">
+    </div>
+</body>
+
+</html>

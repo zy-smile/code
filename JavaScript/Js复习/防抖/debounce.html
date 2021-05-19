@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防抖</title>
+</head>
+<body>
+  <input type="text" id="ipt">
+  <!-- 防抖： 使用keyup事件会频繁触发change事件，原理：用户结束输入或暂停触发change事件 -->
+ <script>
+    function debounce(fn, delay = 500) {
+    let timer = null
+      return function() {
+        if(timer) {
+          clearTimeout(timer)
+        }
+        timer = setTimeout(() => {
+          fn.apply(this, arguments)
+        }, delay)
+      }
+  }
+var input = document.getElementById('ipt')
+input.addEventListener('keyup', debounce(function() {
+  console.log(this.value);
+}, 1000))
+ </script>
+</body>
+</html>

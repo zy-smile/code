@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="li1">123</li>
+    </ul>
+    <script>
+       var ul = document.querySelector('ul')
+       var li1 = document.querySelector('#li1')
+       var lili = document.createElement('li')
+       var lili2 = document.createElement('li')
+       var lili3 = document.createElement('li')
+        var text = document.createTextNode('这是文字')
+        var text1 = document.createTextNode('这是文字1')
+        var text2 = document.createTextNode('这是文字2')
+        lili.appendChild(text)
+        lili2.appendChild(text1)
+        lili3.appendChild(text2)
+        ul.appendChild(lili)
+        ul.insertBefore(lili2, ul.children[0])
+        ul.replaceChild(lili3, li1)
+        // ul.removeChild(li1)
+
+    </script>
+</body>
+
+</html>

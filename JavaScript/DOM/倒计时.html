@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var h = document.querySelector('.hour');
+            var m = document.querySelector('.minute');
+            var s = document.querySelector('.second');
+
+            // 时间表
+            // timer();
+
+            // function timer() {
+            //     var time = new Date();
+
+
+            //     var year = time.getFullYear();
+
+
+            //     var month = time.getMonth() + 1;
+
+
+            //     var date = time.getDate();
+
+            //     var day = time.getDay();
+
+            //     var hour = time.getHours();
+            //     hour = hour < 10 ? '0' + hour : hour;
+            //     var minute = time.getMinutes();
+            //     minute = minute < 10 ? '0' + minute : minute;
+            //     var second = time.getSeconds();
+            //     second = second < 10 ? '0' + second : second;
+            //     h.innerHTML = hour;
+            //     m.innerHTML = minute;
+            //     s.innerHTML = second;
+            // }
+            // setInterval(timer, 1000);
+
+
+
+
+
+            // 倒计时
+            var inputTime = +new Date('2020-3-14 18:00:00');
+
+            timer();
+
+            function timer() {
+                var time = +new Date();
+
+
+                var times = (inputTime - time) / 1000;
+
+
+                var hour = parseInt(times / 60 / 60 % 24);
+
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = parseInt(times / 60 % 60);
+
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = parseInt(times % 60);
+
+                second = second < 10 ? '0' + second : second;
+                h.innerHTML = hour;
+                m.innerHTML = minute;
+                s.innerHTML = second;
+            }
+            var time1 = setInterval(timer, 1000);
+            // 停止倒计时
+            //     var btn = document.querySelector('button');
+            //     var flag = 0;
+            //     btn.addEventListener('click', function() {
+            //         if (flag == 0) {
+            //             clearInterval(time1);
+            //             flag = 1;
+            //         } else {
+            //             setInterval(timer, 1000);
+            //             flag = 0;
+            //         }
+            //     })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+        <button>stop</button>
+    </div>
+</body>
+
+</html>

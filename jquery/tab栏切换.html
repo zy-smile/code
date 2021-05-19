@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .nav {
+            width: 500px;
+            margin: 100px auto;
+        }
+        
+        .nav ul:first-child {
+            overflow: hidden;
+        }
+        
+        .tab-nav li {
+            float: left;
+            width: 80px;
+            height: 50px;
+            border: 1px solid #ccc;
+            background: #ddd;
+            color: #333;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .tab-nav .current {
+            background: red;
+            color: #fff;
+        }
+        
+        .nav ul:last-child li {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="tab-nav">
+            <li class="current">主题1</li>
+            <li>主题2</li>
+            <li>主题3</li>
+            <li>主题4</li>
+        </ul>
+        <ul class="tab-items">
+            <li style=display:block;>红色</li>
+            <li>黄色</li>
+            <li>绿色</li>
+            <li>蓝色</li>
+        </ul>
+    </div>
+    <script>
+        // var tab = document.querySelector('.tab-nav');
+        // var tab_lis = tab.querySelectorAll('li');
+        // var tab_items = document.querySelector('.tab-items');
+        // var items = tab_items.querySelectorAll('li');
+        // for (i = 0; i < tab_lis.length; i++) {
+        //     tab_lis[i].setAttribute('index', i)
+        //     tab_lis[i].addEventListener('click', function() {
+        //         for (i = 0; i < tab_lis.length; i++) {
+        //             tab_lis[i].className = '';
+        //         }
+        //         this.className = 'current';
+        //         var index = this.getAttribute('index');
+
+
+        //         for (i = 0; i < items.length; i++) {
+        //             items[i].style.display = 'none';
+        //         }
+        //         items[index].style.display = 'block';
+        //     })
+
+        // }
+        $(function() {
+            $(".tab-nav li").click(function() {
+                $(this).addClass("current").siblings("li").removeClass("current");
+                var index = $(this).index();
+                $(".tab-items li").eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

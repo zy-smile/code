@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        // let arr3 = [...arr1, ...arr2];
+        // console.log(arr3);
+
+
+
+
+        arr1.push(...arr2);// 扩展运算符 
+        console.log(arr1);
+        var obj = {
+                "0": "1",
+                "1": "2",
+                "2": "3",
+                "length": 3
+            }
+            // var arr = Array.from(obj);
+        var ary = Array.from(obj, item => {
+            console.log(item)
+            return item * 2
+        });
+        console.log(ary);
+
+        // console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

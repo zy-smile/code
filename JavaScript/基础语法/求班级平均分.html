@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // var num = prompt('请输入班级人数：');
+        // var sum = 0;
+        // var average = 0;
+
+        // for (var i = 1; i <= num; i++) {
+        //     var score = prompt('请输入第' + i + '个学生成绩');
+        //     sum = sum + parseFloat(score);
+        // }
+        // average = sum / num;
+        // alert('班级的总分是：' + sum);
+        // alert('班级的平均分是：' + average);
+        var num = prompt('请输入班级人数：');
+        var sum = 0;
+        var average = 0;
+        var i = 1;
+        // while (i <= num) {
+        //     var score = prompt('请输入第' + i + '个学生分数：');
+        //     sum = sum + parseFloat(score);
+        //     i++;
+        // }
+        // average = sum / num;
+        // alert('总分是' + sum);
+        // alert('平均分是:' + average);
+        do {
+
+            var score = prompt('请输入第' + i + '个人的分数');
+            sum = sum + parseFloat(score);
+            i++;
+
+        } while (i <= num)
+        average = sum / num;
+        alert('总分是：' + sum);
+        alert('平均分是：' + average);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

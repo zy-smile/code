@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复选框全选</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+            background-color: rgb(121, 122, 228);
+            color: rgb(72, 238, 122);
+            box-sizing: border-box;
+        }
+        .container span {
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        onload = function() {
+            let select = document.querySelector('.select') 
+            let items = document.querySelectorAll('.select-item')
+           select.addEventListener('change', function() {
+               items.forEach(item => {
+                   item.checked = this.checked
+               })
+           })
+           
+           for (var i = 0; i < items.length; i++) {
+               items[i].onchange = function() {
+                    let flag = true
+                    for (var j = 0; j < items.length; j++) {
+                        if (!items[j].checked) {
+                            flag = false
+                            break;
+                        }
+                    }
+                    select.checked = flag
+                }
+           }
+           
+          
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <input type="checkbox" class="select"><span>全选</span>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="select-item"><span>看电视</span>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="select-item"><span>吃东西</span>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="select-item"><span>敲代码</span>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="select-item"><span>写作业</span>
+        </div>
+        <div class="item">
+            <input type="checkbox" class="select-item"><span>玩手机</span>
+        </div>
+    </div>
+</body>
+</html>

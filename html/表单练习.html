@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单标签</title>
+</head>
+<body>
+	姓名：<input type="text" name="username" value="请输入用户姓名" /><br />
+	密码：<input type="password" name="mima" /><br />
+	性别：男<input type="radio" name="sex" checked="checked" /> 
+	      女<input type="radio" name="sex" /><br />
+	爱好：
+		  睡觉<input type="checkbox" name="hobby" checked="checked" />
+		  踢球<input type="checkbox" name="hobby" />
+		  玩游戏<input type="checkbox" name="hobby" /><br />
+		  <!-- 普通按钮需要value值 -->
+	<input type="button" value="获取验证码" />
+	<input type="submit" />
+	<input type="reset" />
+	<input type="image" src="images/btn.png" />
+	上传头像：
+			<input type="file" onchange="fileUpload()"/>
+		<script>	
+				function fileUpload(obj) {
+					console.log(obj);
+				}
+		</script>
+</body>
+</html>

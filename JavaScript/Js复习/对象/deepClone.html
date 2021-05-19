@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj1 = {
+      age: 12,
+      name: 'zs',
+      address: {
+        city: 'BJ'
+      }
+    }
+    let obj2 = deepClone(obj1)
+    obj2.age = 13
+    obj2.address.city = 'Sh'
+    console.log(obj2);
+    console.log(obj1.age);
+    console.log(obj1.address.city);
+
+    function deepClone(obj) {
+      if (typeof(obj) !== 'object' || obj == null) return 
+      let result = Array.isArray(obj)? []: {}
+      for(key in obj) {
+        if(obj.hasOwnProperty(key)) {
+          if(obj[key] && typeof(obj[key]) == 'object') {
+            result[key] = deepClone(obj[key])
+          }else {
+            result[key] = obj[key]
+          }
+          
+        }
+      }
+      return result
+    }
+  </script>
+</body>
+</html>

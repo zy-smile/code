@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            position: relative;
+            overflow: hidden;
+            width: 80px;
+            height: 30px;
+            margin: 100px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 38px;
+        }
+        
+        p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            opacity: 0;
+            background: rgba(0, 0, 0, .2);
+            transition: all .2s linear;
+        }
+        
+        div:hover p {
+            opacity: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>探索</span>
+        <p></p>
+    </div>
+</body>
+
+</html>

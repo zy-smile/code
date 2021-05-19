@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 50px;
+            /* perspective: 300px; */
+        }
+        
+        ul li {
+            float: left;
+            width: 120px;
+            height: 30px;
+            margin: 0 10px;
+            list-style: none;
+            perspective: 300px;
+        }
+        
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+        
+        .front,
+        .bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .front {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(15px);
+        }
+        
+        .bottom {
+            background-color: purple;
+            transform: translateY(50%) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">天王盖地虎</div>
+                <div class="bottom">宝塔镇河妖</div>
+            </div>
+        </li>
+
+    </ul>
+</body>
+
+</html>

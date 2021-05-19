@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .right {
+            color: green;
+        }
+        
+        .wrong {
+            color: red;
+        }
+        
+        textarea {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="uname"> <span>请输入用户名</span>
+    <textarea name="" id="message"></textarea> <button>提交</button>
+    <div></div>
+    <script>
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+        var uname = document.querySelector('.uname');
+        var message = document.querySelector('#message');
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        uname.onblur = function() {
+            if (reg.test(this.value)) {
+                this.nextElementSibling.className = 'right';
+                this.nextElementSibling.innerHTML = '输入格式正确'
+            } else {
+                this.nextElementSibling.className = 'wrong';
+                this.nextElementSibling.innerHTML = '输入格式错误';
+            }
+        }
+        btn.onclick = function() {
+            div.innerHTML = message.value.replace(/激情/g, '**');
+        }
+    </script>
+</body>
+
+</html>

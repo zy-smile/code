@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>类的继承</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		class Father {
+			constructor(name,age) {
+				this.name = name
+				this.age = age
+			}
+			say() {
+				console.log('父类的方法')
+			}
+		}
+		class Son extends Father {
+			constructor(name, age) {
+				super(name,age)
+			}
+			song() {
+				console.log('这是子类的方法')
+			}
+		}
+		let f = new Father('zs',12)
+		let s = new Son('ls', 13)
+		console.log(f.name + f.age)
+		console.log(s.name + s.age)
+		f.say()
+		s.say()
+		s.song()
+	</script>
+</body>
+</html>

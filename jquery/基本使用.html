@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .current {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <ul>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+    </ul>
+    <script>
+        //基本使用
+        // $("div").css("background", "red");
+        // $(".item").siblings("div").css("background", "red");
+        // $("ul li").css("background", "blue");
+        // $("ul").find("li").css("color", "red");
+        //顶级对象
+        // $(function() {
+        //     $("div").hide();
+        // });
+        jQuery(function() {
+
+        });
+        //jquery对象转换为dom对象
+        // $("ul li")[0].style.color = 'red';
+        // $("ul li").get(1).style.color = 'green';
+        //筛选选择器
+        // $("ul li:first").css("color", "red");
+        // $("ul li:eq(1)").css("color", "red");
+        // $("ul li:even").css("color", "red");
+        // $("ul li").eq(1).css("color", "green");
+        //排他思想
+        // $(function() {
+        //         $("div").click(function() {
+        //             // $("this").siblings("div").css("background", "");
+        //             // $("this").css("background", "red");
+        //             // 链式编程
+        //             $(this).css("background", "red").siblings("div").css("background", "");
+        //         })
+        //     })
+        // 操作css
+        // $(function() {
+        //     $("div").css({
+        //         height: 100,
+        //         background: "green"
+        //     })
+        // })
+        //操作类
+        $(function() {
+            $("div").click(function() {
+                // $(this).addClass("current").siblings("div").removeClass("current");
+                $(this).toggleClass("current");
+            })
+        })
+    </script>
+</body>
+
+</html>

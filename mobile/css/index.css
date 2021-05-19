@@ -1,0 +1,237 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    -webkit-appearance: none;
+    border: none;
+}
+
+header {
+    height: 45px;
+}
+
+header div {
+    float: left;
+    height: 45px;
+    background-color: #333;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+header div:nth-child(1) {
+    width: 8%;
+}
+
+header div:nth-child(1) img {
+    width: 10px;
+}
+
+header div:nth-child(2) {
+    width: 10%;
+}
+
+header div:nth-child(2) img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+header div:nth-child(3) {
+    width: 57%;
+}
+
+header div:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+
+.search {
+    position: fixed;
+    height: 44px;
+    width: 100%;
+    z-index: 999;
+    min-width: 320px;
+    max-width: 640px;
+    overflow: hidden;
+}
+
+.search_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+    /* background-color: pink; */
+}
+
+.search_icon::before {
+    content: "";
+    display: block;
+    margin: 13px 0 0 13px;
+    width: 20px;
+    height: 18px;
+    background: url(../images/icon2.png) no-repeat;
+    background-size: 20px 18px;
+}
+
+.search_login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+}
+
+.search_form {
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    margin: 7px 50px;
+    padding-left: 70px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.icon_jd {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    width: 20px;
+    height: 15px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.icon_jd::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 1px;
+    height: 15px;
+    margin-left: 5px;
+    background-color: #ccc;
+}
+
+.icon_s {
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    width: 18px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat -82px 0;
+    background-size: 200px 200px;
+}
+
+.search_form input {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 12px;
+    color: #ccc;
+    outline: none;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.brand {
+    overflow: hidden;
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+.nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.nav a img {
+    width: 40px;
+    margin-top: 10px;
+}
+
+.nav a span {
+    display: block;
+    margin-top: 5px;
+}
+
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+
+.news img {
+    width: 100%;
+}

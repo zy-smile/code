@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 字面量创建对象
+        // var comp = {
+        //     color: '黑色',
+        //     weight: '5kg',
+        //     brand: '联想',
+        //     model: '小米',
+        //     use: function() {
+
+        //         console.log('看电影、打游戏、听音乐、敲代码');
+        //     }
+
+        // }
+        // console.log(comp.brand);
+        // console.log(comp['color']);
+
+        // comp.use();
+        //new Object 创建对象
+        // var comp = new Object();
+        // comp.color = '黑色',
+        //     comp.weight = '5kg',
+        //     comp.brand = '联想',
+        //     comp.model = '小米',
+        //     comp.use = function() {
+        //         console.log('看电影、打游戏、听音乐、敲代码');
+        //     }
+        // console.log(comp.brand);
+        // console.log(comp['color']);
+
+        // comp.use();
+        //利用构造函数创造对象
+        function Comp(color, weight, brand, model) {
+            this.color = color;
+            this.weight = weight;
+            this.brand = brand;
+            this.model = model;
+            this.mothed = function(use) {
+                console.log(use);
+
+            }
+        }
+        var diannao = new Comp('黑色', '5kg', '联想', '小米');
+        console.log(diannao.color);
+        console.log(diannao['weight']);
+        diannao.mothed('看电影、打游戏、听音乐、敲代码');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手写简易JQuery</title>
+</head>
+<body>
+  <p>这是p1</p>
+  <p>这是p2</p>
+  <p>这是p3</p>
+  <p>这是p4</p>
+  <script>
+    class Jquery {
+      constructor(selector) {
+        let result = document.querySelectorAll(selector)
+        let length = result.length
+        for (let i = 0; i < length; i++) {
+          this[i] = result[i]
+        }
+        this.length = length
+      }
+      get(index) {
+        return this[index]
+      }
+      each(fn) {
+        for (let i = 0; i < this.length; i++) {
+          let elem = this[i]
+          fn(elem)
+        }
+      }
+      on(type, fn) {
+        return this.each(item => {
+          item.addEventListener(type, fn, false)
+        })
+      }
+
+    }
+    class Student extends Jquery {
+      constructor(selector) {
+        super(selector)
+      }
+    }
+    
+  </script>
+</body>
+</html>

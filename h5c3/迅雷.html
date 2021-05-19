@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .earth {
+            position: relative;
+            overflow: hidden;
+            width: 750px;
+            height: 750px;
+            margin: auto;
+        }
+        
+        .banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 730px;
+            height: 730px;
+            background: url(media/earth01.png) no-repeat;
+            background-size: cover;
+        }
+        
+        .icon1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 730px;
+            height: 721px;
+            background: url(media/banner.png) no-repeat -2425px -8px;
+            animation: sunshi 30s linear infinite;
+        }
+        
+        @keyframes sunshi {
+            0% {}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .icon2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 652px;
+            height: 652px;
+            background: url(media/banner.png) no-repeat -2437px -741px;
+            animation: sunshi 3s linear infinite reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="earth">
+        <div class="banner"></div>
+
+        <div class="icon1"></div>
+
+        <div class="icon2"></div>
+    </div>
+</body>
+
+</html>

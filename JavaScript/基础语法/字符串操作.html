@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = 'abaasdffggghhjjkkgfddsssss3444343';
+        //取出确定位置的字符
+        console.log(str.charAt(0));
+        console.log(str.charAt(5));
+        //判断字符是否存在
+        var index = str.indexOf('i');
+        if (index !== -1) {
+            console.log('存在');
+        } else {
+            console.log('不存在');
+        }
+        //把一个字符替换成另一个字符
+        // while (str.indexOf('g') !== -1) {
+        //     str = str.replace('g', '22')
+        // }
+        // console.log(str);
+        console.log(str.substr(1, 5));
+        var obj = {};
+        for (i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (obj[chars]) {
+                obj[chars]++;
+            } else {
+                obj[chars] = 1;
+            }
+        }
+        console.log(obj);
+
+        var max = 0;
+        var ch = '';
+        for (var k in obj) {
+            if (obj[k] > max) {
+                max = obj[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('出现次数最多的字符：' + ch);
+        var str1 = '';
+        for (i = 0; i < str.length; i++) {
+            str1 += str.charAt(i);
+        }
+        console.log(str1);
+        var arr = [];
+        arr = str1.split(',');
+
+        console.log(arr.push('@'));
+        console.log(arr.unshift('@'));
+        console.log(arr);
+        console.log(arr.join(''));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

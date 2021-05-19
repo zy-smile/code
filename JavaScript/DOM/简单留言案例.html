@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+        
+        ul {
+            height: 600px;
+        }
+        
+        ul li {
+            width: 400px;
+            margin-bottom: 10px;
+            list-style: none;
+            background: #ccc;
+        }
+        
+        ul li a {
+            float: right;
+            text-decoration: none;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button')
+        var ul = document.querySelector('ul');
+        btn.onclick = function() {
+            if (text.value == '') {
+                alert('请输入内容');
+                return false;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value + '<a href="javascript:;">删除</a>';
+                ul.insertBefore(li, ul.children[0]);
+
+
+            }
+            var as = document.querySelectorAll('a');
+            for (var i = 0; i < as.length; i++) {
+                as[i].onclick = function() {
+                        ul.removeChild(this.parentNode);
+                    }
+                    // as[i].addEventListener('click', function() {
+                    //     ul.removeChild(this.parentNode);
+                    // })
+            }
+
+        }
+    </script>
+</body>
+
+</html>

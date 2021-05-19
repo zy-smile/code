@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        input {
+            width: 370px;
+            height: 30px;
+            border: none;
+            outline: none;
+        }
+        
+        .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="password">
+        <label for=" ">
+       <img src="images/close.png" alt="">
+    </label>
+    </div>
+    <script>
+        //获取元素
+        var input = document.querySelector('input');
+        var img = document.querySelector('img');
+        //注册事件 处理程序
+        var flog = 0;
+        img.onclick = function() {
+            if (flog === 0) {
+                input.type = 'text';
+                img.src = 'images/open.png'
+                flog = 1;
+            } else {
+                input.type = 'password';
+                img.src = 'images/close.png'
+                flog = 0;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

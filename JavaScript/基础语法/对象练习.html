@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 字面量创建
+        var obj = {
+            uname: '可可',
+            type: '阿拉斯加犬',
+            age: '5岁',
+            color: '棕红色',
+            skill: function() {
+                console.log('bark' + '\n' + 'showFilm');
+            }
+        }
+        console.log(obj.uname);
+        console.log(obj['type']);
+        obj.skill();
+        // 利用new Object 创建
+        var obj = new Object();
+        obj.uname = '鸣人';
+        obj.sex = '男';
+        obj.age = '19岁';
+        obj.skill = function() {
+            console.log('影分身术');
+        }
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.skill();
+        // 利用构造函数创建对象
+        function Hero(uname, type, blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(attack) {
+                console.log(attack)
+            }
+        }
+        var lianpo = new Hero('廉颇', '力量型', 500);
+        console.log(lianpo.name);
+        console.log(lianpo['type']);
+        console.log(lianpo.blood);
+        lianpo.attack('近战');
+        var houyi = new Hero('后羿', '射手型', 100);
+        console.log(houyi.name);
+        console.log(houyi.type);
+        console.log(houyi.blood);
+        houyi.attack('远程');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

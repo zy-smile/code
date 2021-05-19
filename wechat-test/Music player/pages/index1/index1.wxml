@@ -1,0 +1,92 @@
+<view class="root">
+  <view class="tabs">
+    <view class="item item-active">
+      <text>个性推荐</text>
+    </view>
+    <view class="item">
+      <text>歌单</text>
+    </view>
+    <view class="item">
+      <text>主播电台</text>
+    </view>
+    <view class="item">
+      <text>排行榜</text>
+    </view>
+  </view>
+  
+  <scroll-view class="content" scroll-y>
+    <view class="img">
+        <image src="../../images/00.jpg"></image>
+    </view>
+    <view class="list">
+      <view class="list-item">
+        <image src="../../images/01.jpg"></image>
+        <text>私人FM</text>
+      </view>
+      <view class="list-item">
+        <image src="../../images/02.jpg"></image>
+        <text>每日歌曲推荐</text>
+      </view>
+      <view class="list-item">
+        <image src="../../images/03.jpg"></image>
+        <text>云音乐排行榜</text>
+      </view>
+    </view>
+    <view class="inner">
+      <view class="inner-title">
+        <text>推荐歌单</text>
+        <text>更多</text>
+      </view>
+      <view class="inner-content">
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+        <view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view><view class="inner-item">
+          <image src="../../images/00.jpg"></image>
+          <text>好想骑一匹骏马，去拉诗人</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <view class="btns">
+    <view class="photo">
+     <image src="../../images/00.jpg"></image>
+    </view>
+    <view class="song">
+      <text class="title">一生最爱的人</text>
+      <text>谭咏麟</text>
+    </view>
+    <view class="icon-btns">
+      <view class="icon-btn">
+        <image src="../../images/1.jpg"></image>
+      </view>
+      <view class="icon-btn">
+        <image src="../../images/3.jpg"></image>
+      </view>
+      <view class="icon-btn">
+        <image src="../../images/2.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>

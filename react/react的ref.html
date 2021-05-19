@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/react.min.js"></script>
+  <script src="./js/react-dom.min.js"></script>
+  <script src="./js/babel.js"></script>
+</head>
+<body>
+  <div id="example"></div>
+  <script type="text/babel">
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+      }
+      handleClick() {
+        alert(this.refs.username.value);
+      }
+      handleBlur(event) {
+        alert(event.target.value);
+      }
+      render() {
+        return (
+          <div>
+            <input type="text" ref='username'/>
+            <h3 onClick={this.handleClick}>点击获取内容</h3>
+            <input type="text" onBlur={this.handleBlur}/>
+          </div>
+        )
+      }
+    }
+
+  ReactDOM.render(<MyComponent/>, document.getElementById('example'))
+  </script>
+</body>
+</html>

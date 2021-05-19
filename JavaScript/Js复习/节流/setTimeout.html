@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>移动事件</title>
+  <style>
+    .wrapper {
+      width: 100px;
+      height: 100px;
+      margin: 100px auto;
+      text-align: center;
+      line-height: 100px;
+      color: #f0f;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+  </div>
+  <script>
+    var count = 0
+    function mouseAction() {
+      wrapper.innerHTML = count++
+    }
+    var wrapper = document.querySelector('.wrapper')
+    wrapper.onmousemove = throttle(mouseAction, 1000)
+    function throttle(fn, wait) {
+      var _this, arg
+      var prev = 0 // 上次触发时间，默认为0
+      var timer
+      return function() {
+        _this = this
+        arg = arguments
+        console.log(arg);
+        if(timer) return
+        timer = setTimeout(() => {
+          fn.call(_this, arg)
+          timer = null
+        }, wait)
+       
+      }
+    }
+  </script>
+</body>
+</html>

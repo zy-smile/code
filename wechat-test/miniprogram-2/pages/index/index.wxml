@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+    <image src="{{authorImg}}"></image>
+    <view class="progress-box">
+        <progress percent="{{progressWidth}}" active stroke-width="3" duration="100"/>
+    </view>
+    <button type="default" bindtap="btnClick">点击按钮</button>
+   
+    <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+
+
+    <map id="myMap" show-location longitude="{{long}}" latitude="{{lat}}"/>
+
+    <button type="primary" bindtap="getCenterLocation">获取位置</button>
+    <button type="primary" bindtap="moveToLocation">移动位置</button>
+    <button type="primary" bindtap="translateMarker">移动标注</button>
+    <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
+</view>

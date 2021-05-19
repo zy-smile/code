@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>西施</li>
+        <li>貂蝉</li>
+        <li>芙蓉</li>
+        <li>昭君</li>
+    </ul>
+    <input type="button" value="按钮">
+    <script>
+        var ul = document.querySelector('ul');
+
+        var ipt = document.querySelector('input');
+
+
+        ul.addEventListener('click', function(e) {
+            var lis = ul.querySelectorAll('li');
+            for (i = 0; i < lis.length; i++) {
+                lis[i].style.backgroundColor = '';
+            }
+            e.target.style.backgroundColor = 'red';
+
+        })
+        ipt.addEventListener('click', function(e) {
+            var li = document.createElement('li');
+            li.innerHTML = '凤姐';
+            ul.insertBefore(li, ul.children[0]);
+        })
+    </script>
+</body>
+
+</html>

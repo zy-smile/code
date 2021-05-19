@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Student {
+      constructor(name,age) {
+        this.name = name
+        this.age = age
+      }
+      sayHi() {
+        console.log(this)
+      }
+    }
+    let s = new Student('zhangsan',23)
+    s.sayHi()
+    class Xialuo extends Student {
+      constructor(name,age, number) {
+        super(name, age)
+        this.number = number
+      }
+      eat() {
+        console.log(this)
+      }
+    }
+    let x = new Xialuo('xialuo', 22,100)
+    x.eat()
+  </script>
+</body>
+</html>

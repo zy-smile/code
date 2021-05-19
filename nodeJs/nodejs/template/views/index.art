@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    标准语法
+     {{name}}
+     {{age}}
+     {{1 + 1 ? '相等':'不相等'}}
+     {{@content}}输出html标签和内容
+     条件判断
+     {{if(age < 10)}}
+     年龄大于10
+     {{else if(age > 30)}}
+     年龄小于30
+     {{/if}}
+     循环
+     <ul>
+        {{each user}}
+             <li>
+            {{$value.name}}
+            {{$value.age}}
+            {{@$value.content}}
+            </li>
+        {{/each}}     
+     </ul>
+     抽离相同文件
+     {{include '../common/header.art'}}
+     
+     {{include '../common/footer.art'}}
+     原始语法
+     <%= name %>
+     <%= age %>
+     <%= 1+1 ? '相等': '不相等'%>
+     <%- content%>输出html标签和内容
+     条件判断
+    <% if (age > 30 ){ %> 年龄大于30  <%} else if(age < 30) { %>年龄小于30 <%} %>
+    循环
+   <ul>
+     <% for(i=0;i<user.length;i++) {%>  
+        <li>
+        <%= user[i].name%>
+        <%= user[i].age%>
+        <%- user[i].content%>
+        </li>
+    <%}%>
+   </ul>
+   抽离相同文件
+   <% include('../common/header.art') %>
+   <% include('../common/footer.art') %>
+    </body>
+</html>

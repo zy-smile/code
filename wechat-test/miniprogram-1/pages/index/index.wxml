@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+<form bindsubmit="handleSubmit">
+  <view>
+  <label>用户名：</label>
+  <input style="border: 1px solid #ccc" value="{{username}}" name="username" data-name="username" bindinput="inputChange"></input>
+  </view>
+  <view>
+   <label>密码：</label>
+  <input style="border: 1px solid #ccc" value="{{password}}" name="password" data-name="password" bindinput="inputChange"></input>
+  </view>
+  <button style="margin-top: 20rpx" type="primary" form-type="submit">登录</button>
+  </form>
+</view>

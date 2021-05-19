@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		function setDate(uname,age,sex) {
+			this.uname = uname;
+			this.age = age;
+			this.sex = sex;
+			this.sing = function() {
+				console.log('动画');
+			}
+			
+		}
+		var sew =new setDate('小明',18,'男');
+		console.log(setDate.prototype);
+		console.log(sew.__proto__);
+		console.log(Object.prototype)
+		console.log(setDate.prototype.constructor);
+	</script>
+	<body>
+	</body>
+</html>

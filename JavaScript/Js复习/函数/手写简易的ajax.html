@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function ajax(url) {
+      var p = new Promise((resolve,reject) => {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', url, true)
+        xhr.onreadystatechange = function() {
+          if(xhr.readyState === 4) {
+            if(xhr.status === 200) {
+              resolve(JSON.parse(xhr.responseText))
+            }else if(xhr.status == 404) {
+              reject(new Error('404 not found'))
+            }
+          }
+        }
+        xhr.send(null)
+        
+      })
+      return p
+    }
+    ajax('/text.json').then(res => console.log(res))
+  </script>
+</body>
+</html>

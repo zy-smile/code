@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>这是服务器3001的首页</h3>
+    <script type="text/javascript">
+        window.onmessage = function (e) {
+            console.log('eeeeeeeee', e)
+            console.log(e.data);
+            //向父级（发射源）发送消息
+            e.source.postMessage('你好', 'http://localhost:3000');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟放大镜</title>
+    <style>
+        .normal {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+
+        .magnify {
+            display: none;
+            position: absolute;
+            left: 500px;
+            top: 100px;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #aaa;
+            overflow: hidden;
+        }
+
+        .small {
+            width: 300px;
+            height: 300px;
+        }
+
+        .bigger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px;
+            height: 800px;
+        }
+
+        .drag {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #81B9C5;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="normal">
+        <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg"
+            class="small" alt="">
+        <div class="drag"></div>
+    </div>
+    <div class="magnify">
+        <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg"
+            class="bigger" alt="">
+    </div>
+    <script>
+        let normal = document.querySelector('.normal')
+        let magnify = document.querySelector('.magnify')
+        let drag = document.querySelector('.drag')
+        let bigger = document.querySelector('.bigger')
+        normal.addEventListener('mouseover', function () {
+            magnify.style.display = 'block'
+            drag.style.display = 'block'
+        })
+        normal.addEventListener('mouseout', function () {
+            magnify.style.display = 'none'
+            drag.style.display = 'none'
+        })
+        normal.addEventListener('mousemove', function (e) {
+            let X = e.pageX - normal.offsetLeft
+            let Y = e.pageY - normal.offsetTop
+            //  拖动距离
+            let dragX = X - drag.offsetWidth / 2
+            let dragY = Y - drag.offsetHeight / 2
+
+            let dragMax = normal.offsetWidth - drag.offsetWidth
+            if (dragX <= 0) {
+                dragX = 0
+            } else if (dragX >= dragMax) {
+                dragX = dragMax
+            }
+            if (dragY <= 0) {
+                dragY = 0
+            } else if (dragY >= dragMax) {
+                dragY = dragMax
+            }
+            drag.style.left = dragX + 'px'
+            drag.style.top = dragY + 'px'
+            //  大图片的移动距离 = dragX * 大图的最大移动距离 / dragMax
+            let bigX = dragX * (bigger.offsetWidth - magnify.offsetWidth) / dragMax
+            let bigY = dragY * (bigger.offsetHeight - magnify.offsetHeight) / dragMax
+            bigger.style.left = -bigX + 'px'
+            bigger.style.top = -bigY + 'px'
+        })
+    </script>
+</body>
+
+</html>

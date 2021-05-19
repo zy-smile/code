@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            height: 1000px;
+            background-color: #333;
+        }
+        
+        header {
+            height: 60px;
+            padding-top: 5px;
+        }
+        
+        .logo {
+            float: left;
+            width: 156px;
+            height: 60px;
+            margin-left: 200px;
+            background: url(media/xl-logo2x.png) no-repeat;
+            background-size: cover;
+        }
+        
+        .nav {
+            float: right;
+            margin-right: 400px;
+        }
+        
+        .nav li {
+            float: left;
+            list-style: none;
+            line-height: 60px;
+        }
+        
+        .nav li a {
+            display: block;
+            height: 80px;
+            padding: 0 3px;
+            margin-left: 50px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav .current {
+            border-bottom: 2px solid #fff;
+        }
+        
+        .nav li a:hover {
+            border-bottom: 2px solid #fff;
+        }
+        
+        .box1 {
+            position: relative;
+            left: 600px;
+            top: 10px;
+            width: 695px;
+            height: 725px;
+        }
+        
+        .wai {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(media/banner.png) no-repeat -2450px -8px;
+            animation: movesun 15s linear infinite;
+        }
+        
+        .nei {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(media/banner.png) no-repeat -2420px -788px;
+            animation: moveni 15s linear infinite;
+        }
+        
+        @keyframes movesun {
+            0% {}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes moveni {
+            0% {}
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#" class="current">首页</a></li>
+                    <li><a href="#">产品中心</a> </li>
+                    <li><a href="#">区块链</a> </li>
+                    <li><a href="#">广告服务</a> </li>
+                    <li><a href="#">关于我们</a> </li>
+                    <li><a href="#">投资者关系</a> </li>
+                </ul>
+            </div>
+        </header>
+        <div class="box1">
+            <div class="wai"></div>
+
+            <div class="nei"></div>
+        </div>
+
+</body>
+
+</html>

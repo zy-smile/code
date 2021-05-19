@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background: pink;
+        }
+        
+        .current {
+            background: blue;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                // $("div").css("background", "red")
+                $("div").toggleClass("current");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>明月几时有，把酒问青天</div>
+    <button>切换</button>
+</body>
+
+</html>

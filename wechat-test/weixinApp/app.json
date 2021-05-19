@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/info/info",
+    "pages/icon/icon"
+  ],
+  "entryPagePath": "pages/index/index",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#666",
+    "navigationBarTitleText": "微信小程序demo",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "selectedColor": "#0g0",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./images/message.png",
+      "selectedIconPath": "./images/message1.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "列表",
+      "iconPath": "./images/region.png",
+      "selectedIconPath": "./images/region1.png"
+    }, {
+      "pagePath": "pages/info/info",
+      "text": "信息",
+      "iconPath": "./images/search.png",
+      "selectedIconPath": "./images/search1.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解析url参数</title>
+</head>
+<body>
+  <script>
+    // 传统方式 分割字符
+    // function get(name) {
+    //   let search = location.search
+    //   search = search.substr(1)
+    //   // console.log(search);
+    //   var arr = search.split('&')
+    //   // console.log(arr);
+    //   let newArr = {}
+    //   for(i = 0; i < arr.length; i++) {
+    //   item =  arr[i].split('=')
+    //   newArr[item[0]] =  parseInt(item[1])
+    //   }
+    //   if(newArr[name] === undefined) {
+    //     return null
+    //   }
+    //   // console.log(newArr);
+    //   return newArr[name]
+    //   }
+    // 传统 正则表达式
+    function get(name) {
+      let search = location.search
+      search = search.substr(1)
+      const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`, 'i')
+      let res = search.match(reg)
+      if(res === null) {
+        return null
+      }
+      return parseInt(res[2])
+      }
+      //URLSearchParams
+      function query(name) {
+        let search = location.search
+        console.log(search);
+        let p = new URLSearchParams(search)
+        console.log(p)
+      }
+      query('a')
+  </script>
+</body>
+</html>

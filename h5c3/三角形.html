@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 249px;
+            height: 30px;
+            border: 1px solid #000;
+            margin: auto;
+        }
+        
+        div::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            transform: rotate(135deg);
+            transition: all 0.5s;
+        }
+        
+        div:hover::after {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

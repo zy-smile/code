@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app {
+            position: relative;
+            width: 145px;
+            height: 287px;
+            overflow: hidden;
+            margin: 100px auto;
+            background: url(media/line3.png) no-repeat 0 0;
+        }
+        
+        .app:before {
+            position: absolute;
+            content: "";
+            top: 40px;
+            left: 50%;
+            margin-left: -55px;
+            width: 110px;
+            height: 14px;
+            background: url(media/line1.png) no-repeat;
+            background-size: 110px 14px;
+            animation: move 1.5s linear infinite alternate;
+        }
+        
+        @keyframes move {
+            0% {}
+            100% {
+                transform: translateY(100px);
+            }
+        }
+        
+        img {
+            display: block;
+            width: 100px;
+            margin: 45px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+
+        <img src="media/line2.png" alt="">
+    </div>
+</body>
+
+</html>
