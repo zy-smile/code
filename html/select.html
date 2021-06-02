@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉框</title>
+    <style>
+        select {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="">
+        <select name="" id="myselect" multiple>
+            <option value="1">男</option>
+            <option value="2" selected>女</option>
+            <option value="3">未知</option>
+        </select>
+    </form>
+    <script>
+        var myselect = document.getElementById('myselect')
+        // 选中项的索引
+        console.log(myselect.selectedIndex);
+        console.log(myselect.size);
+        console.log(myselect.options);
+        // 移除给定未知的项
+        myselect.remove(0)
+    </script>
+</body>
+</html>

@@ -1,3 +1,0 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
-<button type="default" bindtap="detailBtnClick">点击返回</button>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨页面消息传递</title>
+</head>
+<body>
+    <iframe src="./onMessage.html" frameborder="0" id="myframe"></iframe>
+    <script>
+        var f = document.getElementById('myframe').contentWindow
+        f.postMessage('向内部框架传递数据','*')
+    </script>
+</body>
+</html>
